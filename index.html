@@ -1,0 +1,398 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event management</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="container">
+    <div id="sidebar">
+        <img src="images/logo.png" id="logo">
+        <ul>
+            <li  class="showOne" target = "1"><a href="#"><i class="fas fa-columns fonts" id="dash-icon"></i><span id="dash">Dashboard</span></a></li>
+            <li  class="showOne" target = "2"><a href="#"><i class="fas fa-chart-line fonts"></i><span id="popularity" >Top rated</span></a></li>
+            <li  class="showOne" target = "3"><a href="#"><i class="fas fa-star fonts"></i><span id="saved" >Saved Events</span></a></li>
+            <li  class="showOne" target = "4"><a href="#"><i class="fas fa-calendar-check fonts"></i><span id="complete" >Events Completed</span></a></li>
+            <li  class="showOne" target = "5"><a href="#"><i class="fas fa-cog fonts"></i><span id="setting" >Settings</span></a></li>
+            <li  class="showOne" target = "6"><a href="#"><i class="fas fa-hands-helping fonts"></i><span id="support">Support</span></a></li>
+        </ul>
+     </div>
+ 
+       <!-- DASHBOARD-STARTS -->
+     <div id="notification-box">
+         <h4 id="notification-heading">Notification</h4>
+         <hr>
+
+    
+         <ol>
+             <li class="notification-list">Startup talk starting in 4hrs</li>
+             <li class="notification-list">Halloween party in 2 days</li>
+             <li class="notification-list">Magic show in 10hrs</li>
+         </ol>
+        
+     </div>
+
+     <div id="saved-box">
+            <i class="fas fa-times" id="close"></i>
+           <h3 id="saved-successfully">
+               Saved Successfully
+           </h3>
+     </div>    
+
+     <div id="saved-box-1">
+            <i class="fas fa-times" id="close-1"></i>
+           <h3 id="sent-successfully">
+               Message Sent Successfully
+           </h3>
+     </div>    
+
+
+      
+     <div id="photoshoot-info">
+            <i class="fas fa-times" id="close-2"></i>
+           <h3 id="about">About</h3>
+           <p class="description">Photoshoot is a big event where all the photographers from town will get exposure and can show theire best work</p>
+         <div id="date-info">
+             <p class="date-heading">Date</p>
+             <p class="date-arrival">15 Oct 2018</p>
+         </div>   
+
+         <div id="venue-info">
+                <p class="venue">Venue</p>
+                <p class="place">Central Audi</p>
+            </div>   
+         
+         <div id="time-info">
+                <p class="time">Time</p>
+                <p class="clock">11:00 am</p>
+            </div>
+           <br>
+            <input type="button" id="bookingBtn" value="Book event">
+            <input type="button" id="bookingBtn" value="Save Event">
+    </div>  
+
+
+
+     <div id="main" class="selectDiv div1">
+        <div id="main-header">
+            <div id="search">
+                <input type="text" class="search-bar" placeholder="Search events">
+                <a href="#"><i class="fa fa-search search-icon"></i></a>
+            </div>
+                    
+            <div id="profile-pic">
+                 <a href="#"><img src="images/pro.png" id="profile-img"  alt=""></a>
+             </div>
+                
+             <div id="notification">
+                 <a href="#"><i class="far fa-bell notification-bell"></i></a>
+            </div>
+        </div>
+        
+      
+
+     <div id="main-content" >
+            
+         <div id="main-content-1" >
+            <h1 class="main-heading">Popular events</h1>
+            <div id="main-event-list-1">
+                <img src="images/event-1.png" class="events" id="ev-1" alt="">
+               
+                <img src="images/event-2.png" class="events" id="ev-2" alt="">
+                <img src="images/event-3.png" class="events" id="ev-3" alt="">
+                <img src="images/event-4.png" class="events" id="ev-4" alt="">
+            </div>
+
+            <div id="main-event-list-name">
+                <p class="list-styling photo">Photoshoot</p>
+                <p class="list-styling wedding">Big wedding</p>
+                <p class="list-styling startup">Startup talk</p>
+                <p class="list-styling magic">Town magic-show</p>
+            </div>
+         </div>
+
+         <div id="main-content-2">
+                <h1 class="main-heading">Based on your search</h1>
+                <div id="main-event-list-2">
+                    <img src="images/event-5.png" class="events" id="ev-1" alt="">
+                   
+                    <img src="images/event-6.png" class="events" id="ev-2" alt="">
+                    <img src="images/event-7.png" class="events" id="ev-3" alt="">
+                    <img src="images/event-8.png" class="events" id="ev-4" alt="">
+                </div>
+    
+                <div id="main-event-list-name">
+                    <p class="list-styling halo">Halloween party</p>
+                    <p class="list-styling marathon">Town marathon</p>
+                    <p class="list-styling horror">Horror show</p>
+                    <p class="list-styling ideas">Raising ideas</p>
+                </div>
+             </div>
+
+     </div>
+        
+
+     </div>
+      
+    <!-- DASHBOARD-ENDS -->
+
+     <!-- EVENTS-POPULARITY-STARTS-->
+
+     <div id="events-popularity" class="selectDiv div2">
+            <div id="main-header">
+                    <div id="search">
+                        <input type="text" class="search-bar" placeholder="Search events">
+                        <a href="#"><i class="fa fa-search search-icon"></i></a>
+                    </div>
+                            
+                    <div id="profile-pic">
+                         <a href="#"><img src="images/pro.png" id="profile-img"  alt=""></a>
+                     </div>
+                        
+                     <div id="notification">
+                         <a href="#"><i class="far fa-bell notification-bell"></i></a>
+                    </div>
+                </div>
+         <h1 class="main-heading popularity-heading">Top rated of the week</h1>
+
+        <div id="events-rating">
+            <div id="event-1-rating">
+                <img src="images/event-1.png" alt="">
+                
+                <div id="event-1-rating-bar">
+                    <div id="event-1-progress"></div>
+                </div>
+
+                <input type="button" class="eventvisit" value="Visit">
+            </div>
+
+            <p class="event-name">Photoshoot</p>
+
+            <div id="event-2-rating">
+                    <img src="images/event-6.png" alt="">
+                    <div id="event-2-rating-bar">
+                        <div id="event-2-progress"></div>
+                    </div>
+                    <input type="button" class="eventvisit" value="Visit">
+                </div>
+                <p class="event-name"> Marathon</p>
+
+
+                
+            <div id="event-3-rating">
+                    <img src="images/event-3.png" alt="">
+                    <div id="event-3-rating-bar">
+                        <div id="event-3-progress"></div>
+                    </div>
+                    <input type="button" class="eventvisit" value="Visit">
+                </div>
+                <p class="event-name">Startup talk</p>
+        </div>
+
+     </div>
+
+     <!-- EVENTS-POPULARITY-ENDS -->
+
+     <!-- SAVED-EVENTS STARTS -->
+
+     
+
+     <div id="saved-events" class="selectDiv div3">
+            <div id="main-header">
+                    <div id="search">
+                        <input type="text" class="search-bar" placeholder="Search events">
+                        <a href="#"><i class="fa fa-search search-icon"></i></a>
+                    </div>
+                            
+                    <div id="profile-pic">
+                         <a href="#"><img src="images/pro.png" id="profile-img"  alt=""></a>
+                     </div>
+                        
+                     <div id="notification">
+                         <a href="#"><i class="far fa-bell notification-bell"></i></a>
+                    </div>
+                </div>
+            <h1 class="main-heading save-event-heading">Saved Events</h1>
+            <div id="saved-event-list">
+                <img src="images/event-1.png" class="events" id="ev-1" alt="">
+               
+                <img src="images/event-7.png" class="events" id="ev-2" alt="">
+                <img src="images/event-3.png" class="events" id="ev-3" alt="">
+                <img src="images/event-8.png" class="events" id="ev-4" alt="">
+            </div>
+
+            <div id="main-event-list-name">
+                <p class="list-styling photo">Photoshoot</p>
+                <p class="list-styling horror">Horror show</p>
+                <p class="list-styling startup">Startup talk</p>
+                <p class="list-styling ideas">Raising ideas</p>
+            </div>
+
+            <div id="removeBtn">
+                <input type="button" id="rmv-1" class="remove-btn" value="Remove">
+                <input type="button" id="rmv-2" class="remove-btn" value="Remove">
+                <input type="button" id="rmv-3" class="remove-btn" value="Remove">
+                <input type="button" id="rmv-4" class="remove-btn" value="Remove">
+            </div>
+         </div>
+
+<!-- SAVED-EVENTS-ENDS -->
+    
+      <!-- EVENTS-COMPLETED-STARTS -->
+
+      <div id="completed-events" class="selectDiv div4">
+            <div id="main-header">
+                    <div id="search">
+                        <input type="text" class="search-bar" placeholder="Search events">
+                        <a href="#"><i class="fa fa-search search-icon"></i></a>
+                    </div>
+                            
+                    <div id="profile-pic">
+                         <a href="#"><img src="images/pro.png" id="profile-img"  alt=""></a>
+                     </div>
+                        
+                     <div id="notification">
+                         <a href="#"><i class="far fa-bell notification-bell"></i></a>
+                    </div>
+                </div>
+            <h1 class="main-heading event-completed-heading">Events completed</h1>
+            <div id="completed-event-list">
+                <img src="images/event-11.png" class="events" id="ev-1" alt="">
+               
+                <img src="images/event-10.png" class="events" id="ev-2" alt="">
+                <img src="images/event-13.png" class="events" id="ev-3" alt="">
+                <img src="images/event-14.png" class="events" id="ev-4" alt="">
+            </div>
+
+            <div id="completed-event-list-name">
+                <p class="list-styling toy">Toy show</p>
+                <p class="list-styling video">Video making</p>
+                <p class="list-styling dj">DJ's mix</p>
+                <p class="list-styling concert">Concert</p>
+            </div>
+         </div>
+
+
+        <!-- SETTINGS-START -->
+
+
+        
+      <div id="settings" class="selectDiv div5">
+            <div id="main-header">
+                    <div id="search">
+                        <input type="text" class="search-bar" placeholder="Search events">
+                        <a href="#"><i class="fa fa-search search-icon"></i></a>
+                    </div>
+                            
+                    <div id="profile-pic">
+                         <a href="#"><img src="images/pro.png" id="profile-img"  alt=""></a>
+                     </div>
+                        
+                     <div id="notification">
+                         <a href="#"><i class="far fa-bell notification-bell"></i></a>
+                    </div>
+                </div>
+            <h1 class="main-heading setting-heading">Settings</h1>
+ 
+             <div id="timings">
+                 <p class="setting-field">Events timing</p>
+                 <input type="date" required="required">
+             </div>
+
+             
+             <div id="preferred-event">
+                    <p class="setting-field">Preferred event</p>
+                    <select>
+                            <option value="Startup">Startup</option>
+                            <option value="Business">Business</option>
+                            <option value="Magic">Magic</option>
+                            <option value="Horror">Horror</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Books">Books</option>
+                            <option value="Tech">Technology</option>
+                            <option value="Animals">Animals</option>
+                            <option value="Nature">Nature</option>
+                    </select>
+            </div>
+
+
+            <div id="preferred-location">
+                    <p class="setting-field">Preferred Location</p>
+                    <select>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Banglore">Banglore</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Chennai">Chennai</option>
+                          
+                    </select>
+            </div>
+
+            <div id="payment-method">
+                    <p class="setting-field">Payment method</p>
+                    <select>
+                            <option value="Paytm">Paytm</option>
+                            <option value="paypal">Paypal</option>
+                            <option value="on-arrival">On arrival</option>
+                          
+                    </select>
+            </div>
+
+            
+            <div id="notification-field">
+                    <p class="setting-field">Notification</p>
+                    <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+            </div>
+
+            <div id="savechanges">
+                    <p class="setting-field">Save changes</p>
+                    <input type="button" value="Save" id="savebtn">
+            </div>
+
+          
+   </div>
+
+      <!-- SUPPORT-SECTION -->
+
+   <div id="support-section" class="selectDiv div6">
+        <div id="main-header">
+                <div id="search">
+                    <input type="text" class="search-bar" placeholder="Search events">
+                    <a href="#"><i class="fa fa-search search-icon"></i></a>
+                </div>
+                        
+                <div id="profile-pic">
+                     <a href="#"><img src="images/pro.png" id="profile-img"  alt=""></a>
+                 </div>
+                    
+                 <div id="notification">
+                     <a href="#"><i class="far fa-bell notification-bell"></i></a>
+                </div>
+            </div>
+        <h1 class="main-heading support-heading">Support</h1>
+         
+        <div id="form">
+            <input type="text" required="required" class="support-field" id="name" placeholder="Name"><br>
+            <input type="email" required="required" class="support-field" id="email" placeholder="Email"><br>
+            <textarea rows="8" cols="70" id="message"  placeholder="Your message"></textarea><br>
+            <input type="button" class="support-field" id="submit" value="submit">
+        </div>
+
+        
+
+        </div>
+   </div>
+    
+
+   <script src="main.js"></script>
+</body>
+</html>
